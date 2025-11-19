@@ -166,10 +166,10 @@ function Math(elem)
       svg = tags[elem.mathtype][1] .. svg .. tags[elem.mathtype][2]
       return pandoc.RawInline(FORMAT, svg)
 
-    else
-      local filename = pandoc.sha1(svg) .. '.svg'
-      pandoc.mediabag.insert(filename, 'image/svg+xml', svg)
-      return pandoc.Image('', filename)
+    -- else
+    --   local filename = pandoc.sha1(svg) .. '.svg'
+    --   pandoc.mediabag.insert(filename, 'image/svg+xml', svg)
+    --   return pandoc.Image('', filename)
 
     end
 
